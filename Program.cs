@@ -28,9 +28,9 @@ namespace lab6
             double m = 5.1;
             int n = 4;
             Console.WriteLine("m = " + m + "  ,  n = " + n);
-            PlusOrMultiplyMethod(" Плюс:", m , n , Plus);
-            PlusOrMultiplyMethod(" Плюс:", m, n, Multiply);
-            PlusOrMultiplyMethod2(" Создание экземпляра делегата c Func<> " , m, n,
+            PlusOrMultiplyMethod(" РџР»СЋСЃ:", m , n , Plus);
+            PlusOrMultiplyMethod(" РџР»СЋСЃ:", m, n, Multiply);
+            PlusOrMultiplyMethod2(" РЎРѕР·РґР°РЅРёРµ СЌРєР·РµРјРїР»СЏСЂР° РґРµР»РµРіР°С‚Р° c Func<> " , m, n,
                 (double x, int y) =>
                 {
                 double z = x + y;
@@ -38,7 +38,7 @@ namespace lab6
                  }
                 );
             PlusOrMultiplyMethod2("Plus:  ", m, n, Plus);
-            Console.WriteLine("\nПример группового делегата");
+            Console.WriteLine("\nРџСЂРёРјРµСЂ РіСЂСѓРїРїРѕРІРѕРіРѕ РґРµР»РµРіР°С‚Р°");
             Action<double, int> a1 = (x, y) =>
             {
                 Console.WriteLine("{0} + {1} = {2}",
@@ -56,9 +56,9 @@ namespace lab6
             };
             Action<double, int> group = a1 + a2;
             group += a3;  
-            Console.WriteLine("добавление вызова метода из группового делегата\n");
+            Console.WriteLine("РґРѕР±Р°РІР»РµРЅРёРµ РІС‹Р·РѕРІР° РјРµС‚РѕРґР° РёР· РіСЂСѓРїРїРѕРІРѕРіРѕ РґРµР»РµРіР°С‚Р°\n");
             group(5.2, 3);
-            Console.WriteLine("\nудаление вызова метода из группового делегата\n");
+            Console.WriteLine("\nСѓРґР°Р»РµРЅРёРµ РІС‹Р·РѕРІР° РјРµС‚РѕРґР° РёР· РіСЂСѓРїРїРѕРІРѕРіРѕ РґРµР»РµРіР°С‚Р°\n");
             group -= a3;
             group(5.2, 3);
 
@@ -75,7 +75,7 @@ namespace lab6
 
 
 
-            Console.WriteLine("НАжмите любую клавишу для завершения");
+            Console.WriteLine("РќР°Р¶РјРёС‚Рµ Р»СЋР±СѓСЋ РєР»Р°РІРёС€Сѓ РґР»СЏ Р·Р°РІРµСЂС€РµРЅРёСЏ");
 
             Console.ReadKey();
         }
